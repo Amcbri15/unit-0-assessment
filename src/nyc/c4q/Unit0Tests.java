@@ -14,6 +14,7 @@ public class Unit0Tests {
     public static void main (String args[]) {
       // Use main to test your methods
       printHelloWorld();
+        System.out.println(returnStringUntilQ("ubiquitous"));
     }
 
     public static void printHelloWorld() {
@@ -38,8 +39,8 @@ public class Unit0Tests {
 
     public static void printSumOf1Upto10UsingForLoop() {
         int count = 0;
-        for (int i = 0; i < 10; i++){
-            count+=1;
+        for (int i = 1; i < 10; i++){
+            count+=i;
         }
         System.out.println(count);
     }
@@ -84,11 +85,13 @@ public class Unit0Tests {
         // If the string does not contain a q, then return the empty string "".
 
         String base = "";
-        for (int i = 0; i <= input.length(); i++){
+        for (int i = 0; i <= input.length()-1; i++){
             if (input.charAt(i) == 'q')
                 break;
             base+=input.charAt(i);
         }
+        if (input.equals(base))
+            base = "";
 
         return base;
     }
