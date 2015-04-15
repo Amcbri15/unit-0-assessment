@@ -13,8 +13,10 @@ public class Unit0Tests {
      */
     public static void main (String args[]) {
       // Use main to test your methods
-      printHelloWorld();
+        printHelloWorld();
         System.out.println(returnStringUntilQ("ubiquitous"));
+        bonusPrintOutSumOfFirstTenFibonacciNumbers();
+        bonusPrintOutSumOfFirstFortyFibonacciNumbers();
     }
 
     public static void printHelloWorld() {
@@ -150,10 +152,38 @@ public class Unit0Tests {
 
     // Bonus Problems
     public static void bonusPrintOutSumOfFirstTenFibonacciNumbers() {
+        int fibonacci;
+        int fib1 = 1;
+        int fib2 = 1;
+        int sum = 3;
+
+        for (int i = 4; i <= 10; i++) {
+            fibonacci = fib1 + fib2;
+            fib1 = fib2;
+            fib2 = fibonacci;
+
+            sum+= fibonacci;
+        }
+
+        System.out.println(sum);
 
     }
 
     public static void bonusPrintOutSumOfFirstFortyFibonacciNumbers() {
+        int fibonacci;
+        int fib1 = 1;
+        int fib2 = 1;
+        int sum = 3;
+
+        for (int i = 4; i <= 40; i++) {
+            fibonacci = fib1 + fib2;
+            fib1 = fib2;
+            fib2 = fibonacci;
+
+            sum+= fibonacci;
+        }
+
+        System.out.println(sum);
 
     }
 }
